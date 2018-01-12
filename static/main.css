@@ -131,7 +131,7 @@ body > header {
 */
 
 main > section {
-	margin-bottom: 24vmin;
+	margin-bottom: 12vmin;
 	padding: 3vmin;
 	text-align: center;
 	}
@@ -142,6 +142,7 @@ main > section {
 
 footer {
 	display: flex;
+	margin-bottom: 6vmin;
 	}
 
 footer h6 {
