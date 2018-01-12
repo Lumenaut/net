@@ -136,6 +136,10 @@ main > section {
 	text-align: center;
 	}
 
+main > section > h2 {
+	color: #5AC4B4;
+	}
+
 /*
  * Footer
 */
