@@ -126,33 +126,13 @@ body > header {
 	text-align: center;
 	}
 
-body > header > h1 a {
-	display: inline-block;
-	min-width: 128px;
-	min-height: 128px;
-	width: 24vmin;
-	height: 24vmin;
-	color: transparent;
-	background-image: url("logo_test.png");
-	background-size: 100%;
-	}
-
-body > header > h1 a:hover {
-	color: transparent;
-	}
-
-body > header > nav {
-	font-size: 100%;
-	margin-bottom: 1em;
-	}
-
 /*
  * Main
 */
 
 main > section {
-	margin-bottom: 8vmin;
-	padding: 1vmin;
+	margin-bottom: 24vmin;
+	padding: 3vmin;
 	}
 
 main > section h2 {
@@ -168,7 +148,6 @@ footer {
 	}
 
 footer h6 {
-	color: #dcdcdc;
 	font-size: inherit;
 	font-weight: inherit;
 	}
