@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns= "http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Language" content="en">
+	<title>Lumenaut</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js" integrity="sha256-WPeFPWD3PZQUDrpFnDM1N2KadNVwCfNS4cCZ78b76T8=" crossorigin="anonymous"></script>
+	<link rel="shortcut icon" href="static/favicon.png">
+	<link rel="stylesheet" href="static/base.css">
+	<link rel="stylesheet" href="static/main.css">
+</head>
+<body>
+	<aside>
+		<div id="price-ticker">
+			<table id="price-ticker-table">
+				<thead>
+					<tr>
+						<th><span>XLM / BTC</span></th>
+						<th><span>XLM / USD</span></th>
+						<th><span>XLM / EUR</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							Ƀ <span id="price_XLM-BTC" class="price"></span> <span id="change24HourPct_XLM-BTC"></span>
+						</td>
+						<td>
+							$ <span id="price_XLM-USD" class="price"></span> <span id="change24HourPct_XLM-USD"></span>
+						</td>
+						<td>
+							€ <span id="price_XLM-EUR" class="price"></span> <span id="change24HourPct_XLM-EUR"></span>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</aside>
+
+	<header>
+		<h1><a href="https://lumenaut.net">Lumenaut</a></h1>
+		<nav>
+			<a href="about.html">About</a>
+			<a href="store.html">Store</a>
+			<a href="faq.html">FAQ</a>
+		</nav>
+	</header>
+
+	<main>
+		<section>
+			<h2>Lumenaut Community Pool</h2>
+			<p>100% payout. Zero fees.</p>
+			<p>By the community, for the community.</p>
+		</section>
+	</main>
+
+	<footer>
+		<h6>2018 Lumenaut</h6>
+		<div>
+			<a href="https://www.reddit.com/r/lumenaut">Reddit</a>
+			<a href="https://twitter.com/lumenaut">Twitter</a>
+			<a href="https://facebook.com/lumenaut">Facebook</a>
+			<a href="https://lumenaut-network.slack.com">Slack</a>
+			<a href="https://github.com/lumenaut-network">Github</a>
+		</div>
+	</footer>
+
+	<!-- Price streamer utility function - credit: https://github.com/cryptoqween/cryptoqween.github.io/blob/master/streamer/ccc-streamer-utilities.js -->
+	<script src="static/ccc-streamer-utility.js"></script>
+	<script src="static/price-ticker.js"></script>
+</body>
+</html>
