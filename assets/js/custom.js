@@ -127,8 +127,8 @@ $(document).ready(() => {
 
 // clipboard
 $(document).ready(() => {
-	var clipboard = new Clipboard('#copy-address-link');
-	const $addrLink = $('#copy-address-link');
+	var clipboard = new Clipboard('.copy-address');
+	const $addrLink = $('.copy-address');
 	$addrLink.click((e) => {
 		e.preventDefault();
 		$addrLink.addClass('visited');
