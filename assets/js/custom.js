@@ -127,8 +127,8 @@ $(document).ready(() => {
 
 // clipboard
 $(document).ready(() => {
-	var clipboard = new Clipboard('#copy-address-link');
-	const $addrLink = $('#copy-address-link');
+	var clipboard = new Clipboard('#copy-address-inflation');
+	const $addrLink = $('#copy-address-inflation');
 	$addrLink.click((e) => {
 		e.preventDefault();
 		$addrLink.addClass('visited');
@@ -137,7 +137,7 @@ $(document).ready(() => {
 
 // fetch vote info from fed.network
 $(document).ready(() => {
-	// change to our pool once we have votes
+	// Lumenaut Community Pool address
 	const inflationDest = 'GCCD6AJOYZCUAQLX32ZJF2MKFFAUJ53PVCFQI3RHWKL3V47QYE2BNAUT';
 	$.get({
 		url: 'https://fed.network/inflation/' + inflationDest
