@@ -242,54 +242,56 @@ main #welcome mark span {
 
 main #welcome mark #accounts-contributing,
 main #welcome mark #total-votes {
-	color: rgb(79,177,234);
+	color: rgb(52,199,73);
 	}
 
-main #welcome > address,
-main #welcome > address > span {
+main address,
+main address > span {
+	margin: 0 auto;
+	font-size: 115%;
 	font-style: normal;
 	font-weight: bold;
 	}
 
-main address {
-	margin: 0;
-	font-size: 18px;
-	font-style: normal;
-	font-weight: bold;
-	}
-
-#copy-address-inflation {
+#copy-address-link,
+#copy-address-link-1 {
 	position: relative;
 	color: rgb(79,177,234);
 	transition: color 0.1s linear;
 	}
 
-#copy-address-inflation:hover {
+#copy-address-link:hover,
+#copy-address-link-1:hover {
 	color: rgb(253,188,64);
 	}
 
-#copy-address-inflation.visited {
+#copy-address-link.visited,
+#copy-address-link-1.visited {
 	color: rgb(52,199,73);
 	}
 
-#copy-icon {
+#copy-icon,
+#copy-icon-1 {
 	visibility: visible;
 	opacity: 1;
 	transition: visibility 1s, opacity 0.5s linear;
 	}
 
-#copy-address-inflation.visited > #copy-icon {
+#copy-address-link.visited > #copy-icon,
+#copy-address-link-1.visited > #copy-icon-1 {
 	visibility: hidden;
 	opacity: 0;
 	}
 
-#check-icon {
+#check-icon,
+#check-icon-1 {
 	visibility: hidden;
 	opacity: 0;
 	transition: visibility 0s, opacity 1s linear;
 	}
 
-#copy-address-inflation.visited > #check-icon {
+#copy-address-link.visited > #check-icon,
+#copy-address-link-1.visited > #check-icon-1 {
 	visibility: visible;
 	opacity: 1;
 	}
@@ -309,14 +311,15 @@ main #faq {
 	}
 
 /*
- * Setup
- */
+ * Join
+*/
 
-#setup {
+#join {
 	background-color: rgb(79,177,234);
+	padding: 18vmin 6vmin;
 	}
 
-#setup > h2 {
+#join > h2 {
 	color: #fff;
 	}
 
