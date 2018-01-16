@@ -258,38 +258,38 @@ main address {
 	font-weight: bold;
 	}
 
-.copy-address {
+#copy-address-inflation {
 	position: relative;
 	color: rgb(79,177,234);
 	transition: color 0.1s linear;
 	}
 
-.copy-address:hover {
+#copy-address-inflation:hover {
 	color: rgb(253,188,64);
 	}
 
-.copy-address.visited {
+#copy-address-inflation.visited {
 	color: rgb(52,199,73);
 	}
 
-.copy-icon {
+#copy-icon {
 	visibility: visible;
 	opacity: 1;
 	transition: visibility 1s, opacity 0.5s linear;
 	}
 
-.copy-address.visited > .copy-icon {
+#copy-address-inflation.visited > #copy-icon {
 	visibility: hidden;
 	opacity: 0;
 	}
 
-.check-icon {
+#check-icon {
 	visibility: hidden;
 	opacity: 0;
 	transition: visibility 0s, opacity 1s linear;
 	}
 
-.copy-address.visited > .check-icon {
+#copy-address-inflation.visited > #check-icon {
 	visibility: visible;
 	opacity: 1;
 	}
