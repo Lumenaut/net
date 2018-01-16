@@ -251,49 +251,45 @@ main #welcome > address > span {
 	font-weight: bold;
 	}
 
-#copy-address {
+main address {
 	margin: 0;
 	font-size: 18px;
 	font-style: normal;
 	font-weight: bold;
 	}
 
-#copy-address-link {
+.copy-address {
 	position: relative;
-	color: #fff;
+	color: rgb(79,177,234);
 	transition: color 0.1s linear;
 	}
 
-#copy-address-link {
-	color: rgb(79,177,234);
-	}
-
-#copy-address-link:hover {
+.copy-address:hover {
 	color: rgb(253,188,64);
 	}
 
-#copy-address-link.visited {
+.copy-address.visited {
 	color: rgb(52,199,73);
 	}
 
-#copy-icon {
+.copy-icon {
 	visibility: visible;
 	opacity: 1;
 	transition: visibility 1s, opacity 0.5s linear;
 	}
 
-#copy-address-link.visited > #copy-icon {
+.copy-address.visited > .copy-icon {
 	visibility: hidden;
 	opacity: 0;
 	}
 
-#check-icon {
+.check-icon {
 	visibility: hidden;
 	opacity: 0;
 	transition: visibility 0s, opacity 1s linear;
 	}
 
-#copy-address-link.visited > #check-icon {
+.copy-address.visited > .check-icon {
 	visibility: visible;
 	opacity: 1;
 	}
