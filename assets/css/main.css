@@ -1,0 +1,486 @@
+/*
+ * General
+*/
+
+html {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	font-family: sans-serif;
+	font-size: 100%;
+	line-height: 1.4;	/* important for good lecture, please DO NOT CHANGE */
+	}
+
+body {
+	margin: 0;
+	color: #444;
+	}
+
+a {
+	color: rgb(79,177,234);
+	-webkit-transition: color 0.2s ease-out; 
+	transition: color 0.2s ease-out; 
+	}
+
+a:hover,
+a:focus {
+	color: rgb(253,188,64);
+	-webkit-transition: color 0.1s ease-out; 
+	transition: color 0.1s ease-out; 
+	}
+
+a:active {
+	color: rgb(52,199,73);
+	-webkit-transition: color 0.1s ease-out; 
+	transition: color 0.1s ease-out; 
+	}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0 0 3vmin;
+	font-weight: normal;
+	}
+
+h1 { font-size: 250%; }
+h2 { font-size: 200%; }
+h3 { font-size: 175%; }
+h4 { font-size: 100%; }
+h5 { font-size: 90%; }
+h6 { font-size: 80%; }
+
+p {
+	display: block;
+	padding: 0;
+	margin: 0 0 1em 0;
+	}
+
+p:last-child {
+	margin-bottom: 0 !important;	/* good stuff, trust me, please DO NOT CHANGE */
+	}
+
+mark {
+	background: none;
+	color: inherit;
+	}
+
+/*
+ * Header
+*/
+
+body > header {
+	z-index: 999;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding: 2vmin 6vmin;
+	min-height: 32px;
+	display: flex;
+	flex-wrap: wrap;
+	color: #fff;
+	}
+
+body > header.sticky {
+	background: rgb(2,14,27) 0 0 no-repeat;
+	background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("../img/bg.jpg");
+	background-size: cover;
+	background-position: 0 20.5%;
+	}
+
+/*
+ * Logo
+*/
+
+body > header > h1 {
+	width: 30%;
+	margin: 0;
+	display: flex;
+	align-items: center;
+	}
+
+body > header > h1 > a {
+	padding-left: 8vmin;
+	font-family: "Ailerons";
+	font-size: 70%;
+	color: #fff;
+	background: url("../img/logo.svg") 0 0 no-repeat;
+	background-size: 9vmin;
+	}
+
+body > header > h1 > a:hover {
+	color: rgb(253,188,64);
+	}
+
+/*
+ * Ticker
+*/
+
+body > header > aside {
+	width: 40%;
+	margin: 0;
+	text-align: center;
+	font-size: 75%;
+	display: flex;
+	justify-content: center;
+	}
+
+body > header > aside th {
+	color: rgba(255,255,255,0.5);
+	}
+
+body > header > aside th .xlm {
+	color: rgb(79,177,234);
+	}
+
+body > header > aside th .pair {
+	color: #fff;
+	}
+
+.price_up,
+.highlight-green {
+	color: rgb(52,199,73);
+	}
+
+.price_down,
+.highlight-red {
+	color: rgb(201,81,81);
+	}
+
+/*
+ * Nav
+*/
+
+body > header > nav {
+	width: 30%;
+	margin: 0;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	font-family: "Bebas Neue Bold";
+	font-size: 120%;
+	}
+
+body > header > nav > * {
+	color: #fff;
+	padding: 0.5vmin 1vmin 0.25vmin;
+	margin-left: 3vmin;
+	}
+
+body > header > nav > *:hover {
+	color: rgb(253,188,64);
+	}
+
+body > header > nav > :nth-child(3) {
+	background-color: rgb(79,177,234);
+	border-radius: 1vmin;
+	-webkit-transition: background-color 0.2s ease-out;
+	transition: background-color 0.2s ease-out;
+	}
+
+body > header > nav > :nth-child(3):hover {
+	background-color: #fff;
+	color: rgb(253,188,64);
+	-webkit-transition: background-color 0.2s ease-out;
+	transition: background-color 0.2s ease-out;
+	}
+
+/*
+ * Sections
+*/
+
+main > section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 18vmin 20%;
+	min-height: 100vh;
+	}
+
+main > section h2:not(:first-child) {
+	margin-top: 6vmin;
+	}
+
+main > section h2 {
+	width: 100%;
+	text-align: center;
+	font-family: "Bebas Neue Bold", sans-serif;
+	font-size: 300%;
+	border-style: solid;
+	border-width: 0 0 4px 0;
+	border-image: -webkit-linear-gradient(left,rgba(0,0,0,0)0%,rgba(0,0,0,0)44.9%,rgba(79,177,234,1)45%,rgba(79,177,234,1)55%,rgba(0,0,0,0)55.1%,rgba(0,0,0,0)100%);
+	border-image: linear-gradient(to right,rgba(0,0,0,0)0%,rgba(0,0,0,0)44.9%,rgba(79,177,234,1)45%,rgba(79,177,234,1)55%,rgba(0,0,0,0)55.1%,rgba(0,0,0,0)100%);
+	border-image-slice: 1;
+	}
+
+/*
+ * Welcome
+*/
+
+main #welcome {
+	align-items: center;
+	justify-content: flex-end;
+	text-align: center;
+	color: #fff;
+	background: rgb(2,14,27) 0 0 no-repeat;
+	background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("../img/bg.jpg"); /* use base64 later */
+	background-size: cover;
+	}
+
+main #welcome mark,
+main #welcome > h3 {
+	margin: 6vmin 0 0 0;
+	font-family: "Bebas Neue Bold", sans-serif;
+	}
+
+main #welcome mark {
+	font-size: 125%;
+	}
+
+main #welcome mark span {
+	color: rgba(255,255,255,0.3);
+	}
+
+main #welcome mark #accounts-contributing,
+main #welcome mark #total-votes {
+	color: rgb(79,177,234);
+	}
+
+main #welcome > address,
+main #welcome > address > span {
+	font-style: normal;
+	font-weight: bold;
+	}
+
+#copy-address {
+	margin: 0;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: bold;
+	}
+
+#copy-address-link {
+	position: relative;
+	color: #fff;
+	transition: color 0.1s linear;
+	}
+
+#copy-address-link {
+	color: rgb(79,177,234);
+	}
+
+#copy-address-link:hover {
+	color: rgb(253,188,64);
+	}
+
+#copy-address-link.visited {
+	color: rgb(52,199,73);
+	}
+
+#copy-icon {
+	visibility: visible;
+	opacity: 1;
+	transition: visibility 1s, opacity 0.5s linear;
+	}
+
+#copy-address-link.visited > #copy-icon {
+	visibility: hidden;
+	opacity: 0;
+	}
+
+#check-icon {
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0s, opacity 1s linear;
+	}
+
+#copy-address-link.visited > #check-icon {
+	visibility: visible;
+	opacity: 1;
+	}
+
+.addr-icon {
+	position: absolute;
+	top: 1px;
+	right: -23px;
+	}
+
+/*
+ * FAQ
+*/
+
+main #faq {
+	background-color: rgb(230,231,232);
+	}
+
+/*
+ * Setup
+ */
+
+#setup {
+	background-color: rgb(79,177,234);
+	}
+
+#setup > h2 {
+	color: #fff;
+	}
+
+.instructions-container {
+	background-color: #fff;
+	border-radius: 1vmin;
+	}
+
+.instructions-left {
+	border-top-left-radius: 1vmin;
+	border-bottom-left-radius: 1vmin;
+	border-right: 2px solid rgb(79,177,234);
+	}
+
+.instructions-nav {
+	margin: 20px 5px;
+	}
+
+.instructions-content {
+	margin: 20px 15px;
+	}
+
+.instructions-content h4 {
+	font-weight: bold;
+	}
+
+#stellar-laboratory-instructions li {
+	}
+
+#stellar-laboratory-instructions ol {
+	padding-left: 3vmin;
+	list-style-position: outside;
+	list-style-type: decimal;
+	}
+
+#stellar-laboratory-instructions ol li {
+	padding-top: 1vmin;
+	margin-bottom: 3vmin;
+	}
+
+#stellar-laboratory-instructions img {
+	display: block !important;
+	width: 100% !important;
+	height: 100% !important;
+	}
+
+
+.btn-outline-info {
+	background-color: rgb(79,177,234);
+	border: 2px solid rgb(79,177,234);
+	color: white;
+	border-radius: 1vmin;
+	-webkit-transition: background-color 0.2s ease-out;
+	transition: background-color 0.2s ease-out;
+	}
+
+.btn-outline-info:hover {
+	background-color: #fff;
+	border: 2px solid rgb(253,188,64);
+	color: rgb(253,188,64);
+	-webkit-transition: background-color 0.2s ease-out;
+	transition: background-color 0.2s ease-out;
+	}
+
+.btn-outline-secondary:hover {
+	background-color: #fff;
+	color: rgb(253,188,64);
+	}
+
+.instructions-nav {
+	font-weight: bold;
+	}
+
+.instructions-nav .active {
+	background-color: transparent !important; /* green */
+	color: rgb(52,199,73) !important;
+	font-weight: bold;
+	}
+
+#verify-xlm-address-input {
+	font-size: 0.85em;
+	letter-spacing: 0px;
+	border: 2px solid rgb(79,177,234);
+	}
+
+#verify-xlm-address-button {
+	border: 2px solid rgb(52,199,73) !important; /* green */
+	}
+
+#verify-xlm-address-button:hover {
+	background-color: rgb(52,199,73) !important; /* green */
+	color: #fff;
+	}
+
+.wallet-logos {
+	border: 2px solid transparent;
+	border-radius: 1vmin;
+	}
+
+.wallet-logos:hover {
+	border: 2px solid rgb(253,188,64);
+	}
+
+.hidden {
+	display: none;
+	}
+
+/*
+ * Footer
+*/
+
+footer {
+	display: flex;
+	padding: 6vmin 20%;
+	}
+
+footer h6 {
+	font-size: inherit;
+	font-weight: inherit;
+	}
+
+footer > div {
+	display: flex;
+	margin-left: auto;
+	}
+
+footer > div a {
+	overflow: hidden;
+	max-width:  32px;
+	max-height:  32px;
+	margin-left: 3vmin;
+	color: transparent;
+	background: 50% 50% no-repeat;
+	background-size: contain;
+	}
+
+footer > div a:hover {
+	color: transparent;
+	}
+
+footer > div a:nth-child(1) {
+	background-image: url("../img/fooReddit.svg");
+	}
+
+footer > div a:nth-child(2) {
+	background-image: url("../img/fooTwitter.svg");
+	}
+
+footer > div a:nth-child(3) {
+	background-image: url("../img/fooFacebook.svg");
+	}
+
+footer > div a:nth-child(4) {
+	background-image: url("../img/fooSlack.svg");
+	}
+
+footer > div a:nth-child(5) {
+	background-image: url("../img/fooDiscord.svg");
+	}
+
+footer > div a:nth-child(6) {
+	background-image: url("../img/fooGithub.png");
+	}
