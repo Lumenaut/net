@@ -50,19 +50,19 @@ a:active {
 */
 
 header	{
-	margin-top: 20%;
+	margin-top: 15%;
 	}
 
 h1 a {
 	display: inline-block;
 	height: 16vmin;
-	padding-left: 18vmin;
+	padding-top: 18vmin;
 	font-family: "Ailerons";
 	font-size: 170%;
 	text-align: center;
 	color: #fff;
-	background: url("../img/logo.svg") 0 0 no-repeat;
-	background-size: 18vmin;
+	background: url("../img/logo.svg") 50% 0 no-repeat;
+	background-size: contain;
 	}
 
 p {
