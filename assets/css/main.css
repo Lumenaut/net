@@ -218,7 +218,7 @@ main > section h2 {
 
 main #welcome {
 	align-items: center;
-	justify-content: flex-end;
+	justify-content: center;
 	text-align: center;
 	color: #fff;
 	background: rgb(2,14,27) 0 0 no-repeat;
