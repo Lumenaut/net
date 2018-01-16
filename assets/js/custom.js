@@ -127,11 +127,32 @@ $(document).ready(() => {
 
 // clipboard
 $(document).ready(() => {
-	var clipboard = new Clipboard('#copy-address-inflation');
-	const $addrLink = $('#copy-address-inflation');
+	var clipboard = new Clipboard('#copy-address-link');
+	const $addrLink = $('#copy-address-link');
 	$addrLink.click((e) => {
 		e.preventDefault();
 		$addrLink.addClass('visited');
+	});
+
+	var clipboard1 = new Clipboard('#copy-address-link-1');
+	const $addrLink1 = $('#copy-address-link-1');
+	$addrLink1.click((e) => {
+		e.preventDefault();
+		$addrLink1.addClass('visited');
+	});
+
+	var clipboard2 = new Clipboard('#copy-address-link-2');
+	const $addrLink2 = $('#copy-address-link-2');
+	$addrLink2.click((e) => {
+		e.preventDefault();
+		$addrLink2.addClass('visited');
+	});
+
+	var clipboard3 = new Clipboard('#copy-address-link-3');
+	const $addrLink3 = $('#copy-address-link-3');
+	$addrLink3.click((e) => {
+		e.preventDefault();
+		$addrLink3.addClass('visited');
 	});
 });
 
