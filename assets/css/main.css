@@ -310,6 +310,20 @@ main #faq {
 	background-color: rgb(230,231,232);
 	}
 
+.calculator,
+#calculator-input {
+	text-align: center;
+	}
+
+.calculator small {
+	color: rgba(0,0,0,0.4);
+	}
+
+.calculator .result {
+	margin-bottom: 0;
+	font-family: "Bebas Neue Bold", sans-serif;
+	}
+
 /*
  * Join
 */
