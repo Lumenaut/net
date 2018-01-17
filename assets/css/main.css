@@ -360,9 +360,6 @@ main #faq {
 	font-weight: bold;
 	}
 
-#stellar-laboratory-instructions li {
-	}
-
 #stellar-laboratory-instructions ol {
 	padding-left: 3vmin;
 	list-style-position: outside;
@@ -379,7 +376,6 @@ main #faq {
 	width: 100% !important;
 	height: 100% !important;
 	}
-
 
 .btn-outline-info {
 	background-color: rgb(79,177,234);
