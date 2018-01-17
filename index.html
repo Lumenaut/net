@@ -65,14 +65,14 @@
 
 			<h2>Members of Lumenaut</h2>
 			<p>The collective is formed from users that met in the official <a href="https://reddit.com/r/stellar">Stellar subreddit</a>, we don't like to differentiate collaborators because we believe that any contribution has its own merits, this list may grow and as such we will edit it to add the new members.</p>
-			
+
 			<p>As of now the contributors are (no order of preference): u/b1tcc, iduvall, enzo-the-dog, xlm_in_2018, jeffreytai, jorbs2, voidburn, texm, 7Swerve7, johnmars, lyeandro2587, CryptoErik, AkdM_, IAmBabau, usbogie, peepluvr, fatguy6pack, RedRanger, sinceron, kucak, emmittj, andrew, arya, bloddwyn, complex, CptSpacePirate, craigChan, dotsun, ExMachina, Flexo, hugetanks, jaybirch, kawera, lemand, matheususb.comp, jyl5555, prasanth, sandworm, shahin, speakoespanglish, speed7, spyiestspy, stellar-source, seiryuz... and you!</p>
 
 			<h2>How To Help Lumenaut</h2>
 
-			<p>All our services are fair and we work hard for free, trying to improve the community and Stellar ecosystem. As you know servers have to be paid and we don't charge anything, we will do our best to offer you a top notch and quality service for free. If you would like to contribute and help us pay the servers it will help this collective to continue being free, avoiding you to use other pools that will cut fees in your Inflation payments or spam you.</p>
+			<p>All our services are fair and we work hard for free, trying to improve the community and Stellar ecosystem. As you know servers have to be paid and we don't charge anything, we will do our best to offer you a top notch and quality service for free. If you would like to contribute and help us pay the servers it will help this collective to continue being free, avoiding you to use other pools that will cut fees in you Inflation payments or spam you.</p>
 
-			<p>Basically speaking we are your best option. We are reliable and free. If you would like us to continue like take please help us achieve at least $50 per month so all the services can run smoothly. You can donate XLM to our donation's address:</p>
+			<p>Basically speaking we are your best option. We are reliable and free. If you would like us to continue like that, please help us achieve at least $50 per month so all the services can run smoothly. You can donate XLM to our donations address:</p>
 
 			<address id="copy-address-1">
 				<a id="copy-address-link-1" data-clipboard-text="GDP3J3NCR4MVB6QBQAYDOMWUYV53CAJ43YQIIFQSCU5ITIGESY2ONAUT">
@@ -85,16 +85,23 @@
 
 		<section id="faq">
 			<h2>What Is Inflation</h2>
-			<p>Inflation is a nominal mechanism which distributes new Lumens, in a weekly basis and at a rate of 1% per year to the holders. The inflation is distributed using a voting system, if an address does not have the minimum requirements to get over 0.05% of the votes, then can still achieve it by joining a pool. The pool is where the community can gather together and vote all their Lumens to reach the minimum requirement, so Stellar Development Foundation pays the inflation. Basically, it means that if you're a holder then you receive free Lumens.</p>
-
+			<p>Inflation is a nominal mechanism which distributes new Lumens, on a weekly basis and at a rate of 1% per year to the holders. The inflation is distributed using a voting system, if yout address does not have the minimum requirements of 0.05% of the votes, then you can still achieve it by joining a pool. The pool is where the community can gather together and vote all their Lumens to reach the minimum requirement, so Stellar Development Foundation pays the inflation. Basically, it means that if you're a holder then you receive free Lumens.</p>
 			<p>To read more about Inflation please consult the <a href="https://www.stellar.org/developers/guides/concepts/inflation.html">official documentation</a>.</p>
 
 			<h2>Why Use The Community Pool</h2>
 			<p>Due to the lack of a good public pool, we decided to do something better where no fees will be taken from you and you will receive the full fair amount of your payment. By joining our pool you will not encounter any problem and you will not lose any of your Lumens. There is no risk and your Lumens will always be in your wallet. Everything is 100% safe!</p>
 
 			<h2>How To Vote In The Community Pool</h2>
+			<p>Voting is done by setting the option Inflation Destination in your wallet to our account ID. The number of votes you have is equal to your balance, so if you have 100 XLM then you have 100 votes. The more Lumens you have the more Lumens you receive via Inflation and we will send you the inflation lumens to your wallet address every week. To know how to set the option Inflation Destination for your wallet please consult the instructions below.</p>
 
-			<p>Voting is done by setting the option Inflation Destination in your wallet to our account ID. The number of votes you have is equal to your balance, so if you have 100 XLM then you have 100 votes. The more Lumens you have the more Lumens you receive via Inflation and we will send you the inflation lumens to your wallet address every week. To know how to set the option Inflation Destination for your wallet please consult the instructions bellow.</p>
+			<h2>How Much Will You Get In Each Inflation</h2>
+			<div class="calculator">
+				<label for="calculator-input">Enter your XLM amount or Public Key bellow to know how much you will receive each week.</label>
+				<input type="text" id="calculator-input" class="form-control">
+				<small>We don't store anything on our server, calculation is done locally on your browser. <a href="https://github.com/Lumenaut-Network/website/tree/gh-pages">More info.</a></small>
+
+				<h3 class="result"><strong>Estimated payout = <span id="calculator-result">0</span> XLM</strong></h3>
+			</div>
 		</section>
 
 		<section id="join">
@@ -279,6 +286,9 @@
 
 	<!-- Price ticker JS -->
 	<script src="assets/js/ticker.js"></script>
+
+	<!-- Calculator JS -->
+	<script src="assets/js/calculator.js"></script>
 
 	<!-- Font Awesome -->
 	<script defer src="assets/js/fontawesome-all.min.js"></script>
