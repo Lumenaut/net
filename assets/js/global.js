@@ -1,3 +1,6 @@
+var from = document.referrer;
+console.log(from);
+
 // fetch vote info
 $(document).ready(() => {
 	// pool address
