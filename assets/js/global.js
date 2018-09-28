@@ -1,7 +1,3 @@
-if (document.referrer !== "google.com") {
-    window.location.href = "lumenaut.net/disclaimer.html";
-}
-
 // fetch vote info
 $(document).ready(() => {
 	// pool address
