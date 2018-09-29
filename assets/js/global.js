@@ -240,40 +240,19 @@ $(document).keypress(function(e) {
 // Setup & Instructions
 $(document).ready(function() {
 	const POOL_ADDRESS = 'GCCD6AJOYZCUAQLX32ZJF2MKFFAUJ53PVCFQI3RHWKL3V47QYE2BNAUT';
-	const $key = $('#key');
+	const $address = $('#address');
 	const $verify = $('#verify');
 	const $result = $('#result');
-
-	const instructionsState = {};
-	const wallet_to_custom_instructions = {
-		'stellar-desktop-client': 'stellar-desktop-client',
-		'ledger': 'ledger-nano'
-	};
 
 	const server = new StellarSdk.Server('https://horizon.stellar.org');
 	StellarSdk.Network.usePublicNetwork();
 
-	// listen for wallet logo clicks
-	$walletLogos.click((e) => {
-		e.preventDefault();
-
-		const selected_wallet = e.target.dataset['wallet'];
-		instructionsState['selected_wallet'] = selected_wallet;
-		instructionsState['instructions'] = wallet_to_custom_instructions[selected_wallet] || 'stellar-laboratory-instructions';
-		console.log(selected_wallet, instructionsState.instructions);
-
-		$instructions.hide();
-		$('#' + instructionsState.instructions).show();
-
-		$castVoteTab.click();
-	});
-
-	$key.keyup((e) => {
+	$address.keyup((e) => {
 		e.preventDefault();
 
 		$result.empty();
 
-		const pubKey = $key.val();
+		const pubKey = $address.val();
 		if (pubKey && StellarSdk.StrKey.isValidEd25519PublicKey(pubKey)) {
 			verifyAccount();
 		}
@@ -282,7 +261,7 @@ $(document).ready(function() {
 	$verify.click(verifyAccount);
 
 	function verifyAccount() {
-		const pubKey = $key.val();
+		const pubKey = $address.val();
 
 		console.log('pub key: ', pubKey);
 
