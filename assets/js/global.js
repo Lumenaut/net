@@ -240,17 +240,38 @@ $(document).keypress(function(e) {
 // Setup & Instructions
 $(document).ready(function() {
 	const POOL_ADDRESS = 'GCCD6AJOYZCUAQLX32ZJF2MKFFAUJ53PVCFQI3RHWKL3V47QYE2BNAUT';
-	const $key = $('#join input');
-	const $verify = $('#join button');
-	const $result = $('#confirming');
+	const $key = $('#key');
+	const $verify = $('#verify');
+	const $result = $('#result');
+
+	const instructionsState = {};
+	const wallet_to_custom_instructions = {
+		'stellar-desktop-client': 'stellar-desktop-client',
+		'ledger': 'ledger-nano'
+	};
 
 	const server = new StellarSdk.Server('https://horizon.stellar.org');
 	StellarSdk.Network.usePublicNetwork();
 
+	// listen for wallet logo clicks
+	$walletLogos.click((e) => {
+		e.preventDefault();
+
+		const selected_wallet = e.target.dataset['wallet'];
+		instructionsState['selected_wallet'] = selected_wallet;
+		instructionsState['instructions'] = wallet_to_custom_instructions[selected_wallet] || 'stellar-laboratory-instructions';
+		console.log(selected_wallet, instructionsState.instructions);
+
+		$instructions.hide();
+		$('#' + instructionsState.instructions).show();
+
+		$castVoteTab.click();
+	});
+
 	$key.keyup((e) => {
 		e.preventDefault();
 
-		$verify.empty();
+		$result.empty();
 
 		const pubKey = $key.val();
 		if (pubKey && StellarSdk.StrKey.isValidEd25519PublicKey(pubKey)) {
@@ -269,7 +290,7 @@ $(document).ready(function() {
 			$result.empty();
 
 			$result.append(
-				"<p class=\"alert alert-warning\">Invalid address. Please try to copy and paste again.</p>"
+				"<p class=\"alert alert-warning\">Invalid address. Try copy-pasting again.</p>"
 			);
 			return;
 		}
@@ -281,7 +302,7 @@ $(document).ready(function() {
 				if (account.inflation_destination != POOL_ADDRESS) {
 					$result.empty();
 					$result.append(
-						"<p class=\"alert alert-warning\">Hmmm! Looks like you're not in the pool yet.</p>"
+						"<p class=\"alert alert-warning\">Hmmm. Looks like you're not in the pool yet.</p>"
 					);
 				} else {
 					$result.empty();
