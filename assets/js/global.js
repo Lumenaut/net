@@ -55,7 +55,7 @@ $(document).ready(function(){
 
 	table.on( 'click', '.result', function() {
 		var data = table.row($(this).parents('tr')).data();
-		window.open(data[ 5 ], '_blank');
+		window.open(data[ 3 ], '_blank');
 	});
 
 
