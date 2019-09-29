@@ -417,7 +417,8 @@ main > section h3:not(:first-child) {
 	text-transform: uppercase;
 	}
 
-#welcome .past {
+#welcome #accounts-contributing,
+#welcome #total-votes {
 	color: #01AA78; /* green */
 	}
 
