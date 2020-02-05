@@ -457,7 +457,7 @@ main > section h3:not(:first-child) {
 	font-family: 'Open Sans', sans-serif !important;
 	font-size: inherit !important;
 	text-transform: default !important;
-	margin: 0 6vmin !important;
+	margin: 0 18vmin !important;
 	padding: 3vmin !important;
 	background-color: #ED6A5E; /* red */
 	border-radius: 0.5vmin;
