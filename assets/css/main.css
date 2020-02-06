@@ -11,11 +11,13 @@ html {
 	color: #fff;
 	}
 
-body {
+body,
+body > header {
 	background-color: #1B2029;
 	background-image: -webkit-linear-gradient(rgba(27,32,41,.8), rgba(27,32,41,.8)), url("../img/bg.jpg");
 	background-image: linear-gradient(rgba(27,32,41,.8), rgba(27,32,41,.8)), url("../img/bg.jpg");
 	background-size: cover;
+	background-position: 0 0;
 	}
 
 a {
@@ -251,73 +253,6 @@ body > header nav > a {
 	color: #fff;
 	}
 
-.lang {
-	display: block;
-	font-family: 'Oswald', 'Arial Narrow', 'Arial Nova Cond', sans-serif;
-	text-transform: uppercase;
-	}
-
-.lang > li {
-	position: relative;
-	opacity: .3;
-	float: right;
-	right: 1.5vmin;
-	width: 6vmin;
-	height: 6vmin;
-	min-width: 32px;
-	min-height: 32px;
-	padding: 1.5vmin;
-	}
-
-.lang svg {
-	display: block;
-	
-	}
-
-.lang > li:hover  {
-	opacity: 1;
-	cursor: s-resize;
-	background-color: #5676B1; /* blue */
-	border-top-left-radius: 0.5vmin;
-	border-top-right-radius: 0.5vmin;
-	}
-
-.lang ul {
-	overflow: hidden;
-	display: none;
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	-ms-transform: translateY(100%);
-	-webkit-transform: translateY(100%);
-	transform: translateY(100%);
-	text-align: right;
-	background-color: #5676B1; /* blue */
-	border-top-left-radius: 0.5vmin;
-	border-bottom-left-radius: 0.5vmin;
-	border-bottom-right-radius: 0.5vmin;
-	}
-
-.lang li:hover ul {
-	display: block;
-	}
-
-.lang a {
-	display: block;
-	padding: 0.5vmin 1vmin;
-	color: #fff;
-	}
-
-.lang a:hover {
-	color: #fff;
-	background-color: #626495; /* violet */
-	transition: background-color .3s cubic-bezier(0,0,0,1);
-	}
-
-.lang svg {
-	fill: currentColor;
-	}
-
 
 
 /*
@@ -454,21 +389,15 @@ main > section h3:not(:first-child) {
 	}
 
 #welcome #disabled {
-	font-family: 'Open Sans', sans-serif !important;
-	font-size: inherit !important;
-	text-transform: default !important;
-	margin: 0 18vmin !important;
-	padding: 3vmin !important;
-	background-color: #ED6A5E; /* red */
+	margin: 0 18vmin;
+	padding: 3vmin;
+	background-color: rgba(237, 106, 94, 0.3); /* red */
 	border-radius: 0.5vmin;
+	font-size: 12px;
 	}
 
-#welcome #disabled a {
-	color: black; /* green */
-	}
-
-#welcome #disabled a:hover {
-	color: inherit; /* green */
+#welcome #disabled h3 {
+	margin: 0 0 3vmin;
 	}
 
 
